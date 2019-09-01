@@ -1,0 +1,15 @@
+subscription DrinkSubscription {
+    drinks {
+        id,
+        name,
+        published,
+        favorited_by {
+            id,
+            name,
+        }
+        creator {
+            id,
+            name
+        }
+    }
+}

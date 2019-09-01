@@ -1,0 +1,21 @@
+query MainFeed {
+    feed {
+        __typename
+        id
+        name
+        published
+        creator {
+            id,
+            name
+        }
+        favorited_by {
+            id,
+            name,
+        }
+        ingredients {
+            id,
+            name,
+            alcoholic
+        }
+    }
+}

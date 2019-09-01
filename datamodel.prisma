@@ -1,0 +1,30 @@
+type User {
+  id: ID! @id
+  email: String @unique
+  name: String!
+  favorites: [Drink!]! @relation(name: "Favorites")
+  creations: [Drink!]! @relation(name: "DrinksByUser")
+}
+
+type Ingredient {
+  id: ID! @id
+  name: String! @unique
+  alcoholic: Boolean! @default(value: false)
+  drinks: [Drink!] @relation(name: "Ingredients")
+}
+
+type Drink {
+  id: ID! @id
+  published: Boolean! @default(value: false)
+  name: String! @unique
+  # nicknames: [String!]
+  ingredients: [Ingredient!]! @relation(name: "Ingredients")
+
+  favorited_by: [User!] @relation(name: "Favorites")
+  creator: User! @relation(name: "DrinksByUser")
+}
+
+# TODO: Allow 'nicknames' for drinks
+# type DrinkAltname {
+#   name: String
+# }

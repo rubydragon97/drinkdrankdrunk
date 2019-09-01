@@ -1,0 +1,12 @@
+schema: "../generated/schema.graphql"
+documents: 
+- "./lib/gql/MainFeed.gql"
+- "./lib/gql/DrinkSubscription.gql"
+overwrite: true
+generates:
+  lib/drinky_graphql_serializers.dart:
+    plugins:
+      - graphql-to-dart
+config:
+  parts:
+    - "./drinky_graphql_serializers.g.dart"
