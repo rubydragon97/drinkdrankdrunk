@@ -9,7 +9,7 @@ class MainFeedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<int> colorCodes = <int>[600, 500, 100];
+    final List<int> colorCodes = <int>[600, 500, 400, 100];
 
     return MainFeedTypedQuery(
       variables: MainFeedVariables.empty(),
@@ -29,8 +29,9 @@ class MainFeedPage extends StatelessWidget {
             itemCount: data.feed.length,
             itemBuilder: (BuildContext context, int index) {
               return Container(
-                height: 50,
-                color: Colors.amber[colorCodes[index % colorCodes.length]],
+                margin: const EdgeInsets.all(6.0),
+                height: 70,
+                color: Colors.grey[colorCodes[index % colorCodes.length]],
                 child: Center(child: Text(data.feed[index].name)),
               );
             },
