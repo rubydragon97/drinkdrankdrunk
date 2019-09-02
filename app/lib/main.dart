@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'Drinky',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primarySwatch: Colors.cyan,
           ),
           home: MyHomePage(title: 'Welcome to Drinky'),
         ));
