@@ -22,6 +22,6 @@ services:
       POSTGRES_USER: prisma
       POSTGRES_PASSWORD: prisma
     volumes:
-      - /home/isaac/go/src/github.com/parrotmac/drinky/pgdata:/var/lib/postgresql/data
+      - ./pgdata:/var/lib/postgresql/data
 volumes:
   postgres: ~
